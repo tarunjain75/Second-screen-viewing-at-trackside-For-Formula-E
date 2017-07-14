@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Colored rectangle-->
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="800dp"
+                android:height="40dp" />
+            <solid android:color="#13a8de" />
+        </shape>
+    </item>
+
+    <!-- Overlay with same color as background-->
+    <item
+        android:top="60dp"
+        android:bottom="-90dp"
+        android:right="-160dp">
+        <rotate
+            android:fromDegrees="-60">
+            <shape android:shape="rectangle">
+                <solid android:color="#FFF" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

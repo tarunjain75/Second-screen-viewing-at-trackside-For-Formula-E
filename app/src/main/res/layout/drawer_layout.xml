@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4F5D75"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/live_race"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textColor="@android:color/white"
+
+                android:drawablePadding="15dp"
+                android:elevation="5dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/home"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:onClick="LIVE_RACE"/>
+
+
+            <TextView
+                android:id="@+id/teams"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:drawablePadding="15dp"
+                android:elevation="5dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:onClick="TEAMS"
+                android:text="@string/teams"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/driver"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawablePadding="15dp"
+                android:elevation="5dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:onClick="DRIVER"
+                android:text="@string/Driver"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
