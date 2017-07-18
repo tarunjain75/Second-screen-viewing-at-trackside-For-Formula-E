@@ -3,6 +3,8 @@ package example.com.trackside;
 
 
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +19,10 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.flaviofaria.kenburnsview.KenBurnsView;
+import com.flaviofaria.kenburnsview.Transition;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +44,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView live_race,team,driver;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
+        KenBurnsView kbv = (KenBurnsView) findViewById(R.id.image);
+        kbv.setTransitionListener(new KenBurnsView.TransitionListener() {
+            @Override
+            public void onTransitionStart(Transition transition) {
+
+            }
+            @Override
+            public void onTransitionEnd(Transition transition) {
+
+            }
+        });
+
         live_race=(TextView)findViewById(R.id.live_race);
         team=(TextView)findViewById(R.id.teams);
 
