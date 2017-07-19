@@ -1,10 +1,9 @@
 package example.com.trackside;
 
 
-
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.graphics.Typeface;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,6 +25,7 @@ import com.flaviofaria.kenburnsview.Transition;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import example.com.trackside.fragments.HorizontalDriverFragment;
 import example.com.trackside.fragments.HorizontalDriverTeamFragment;
@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     DrawerLayout drawerLayout;
     View menu_view;
     FrameLayout framelay;
-    TextView live_race,team,driver;
-
+    TextView live_race, team, driver;
+    private Typeface typeface;
 
 
     @Override
@@ -50,23 +50,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-
+        typeface = Typeface.createFromAsset(this.getApplicationContext().getAssets(),
+                String.format(Locale.US, "fonts/%s", "1MuseoSans_100Italic.otf"));
         KenBurnsView kbv = (KenBurnsView) findViewById(R.id.image);
+
         kbv.setTransitionListener(new KenBurnsView.TransitionListener() {
             @Override
             public void onTransitionStart(Transition transition) {
 
             }
+
             @Override
             public void onTransitionEnd(Transition transition) {
 
             }
         });
 
-        live_race=(TextView)findViewById(R.id.live_race);
-        team=(TextView)findViewById(R.id.teams);
+        live_race = (TextView) findViewById(R.id.live_race);
+        TextView placeTV = (TextView) findViewById(R.id.placeTV);
 
-        driver=(TextView)findViewById(R.id.driver);
+        placeTV.setTypeface(typeface);
+        team = (TextView) findViewById(R.id.teams);
+
+        driver = (TextView) findViewById(R.id.driver);
         imageView = (ImageView) findViewById(R.id.menu);
         imageView.setOnClickListener(this);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -144,42 +150,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void LIVE_RACE(View v){
-            live_race.setSelected(true);
-            team.setSelected(false);
-            driver.setSelected(false);
-            Fragment liveRaceFragment= new LiveRaceFragment();
-        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.framelay,liveRaceFragment);
+    public void LIVE_RACE(View v) {
+        live_race.setSelected(true);
+        team.setSelected(false);
+        driver.setSelected(false);
+        Fragment liveRaceFragment = new LiveRaceFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.framelay, liveRaceFragment);
         transaction.addToBackStack(null);
         transaction.commit();
         drawerLayout.closeDrawers();
     }
 
-    public void TEAMS(View view){
+    public void TEAMS(View view) {
         live_race.setSelected(false);
         team.setSelected(true);
         driver.setSelected(false);
-        Fragment liveRaceFragment=new DriverAndTeamFragment();
-        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.framelay,liveRaceFragment);
+        Fragment driverAndTeamFragment = new DriverAndTeamFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.framelay, driverAndTeamFragment);
         transaction.addToBackStack(null);
         transaction.commit();
         drawerLayout.closeDrawers();
     }
 
-    public void DRIVER(View view){
+    public void DRIVER(View view) {
         live_race.setSelected(false);
         team.setSelected(false);
         driver.setSelected(true);
-        Fragment liveRaceFragment=new DriverAndTeamFragment();
-        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.framelay,liveRaceFragment);
+        Fragment driverAndTeamFragment = new DriverAndTeamFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.framelay, driverAndTeamFragment);
         transaction.addToBackStack(null);
         transaction.commit();
         drawerLayout.closeDrawers();
     }
 
+    public void WatchLive(View view) {
+        Fragment liveRaceFragment = new LiveRaceFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.framelay, liveRaceFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 
 
 }

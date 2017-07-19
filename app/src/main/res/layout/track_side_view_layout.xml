@@ -35,7 +35,7 @@
                         android:layout_gravity="center|top"
                         android:drawableLeft="@drawable/ic_action_live_dot"
                         android:gravity="center"
-                        android:text="Live"
+                        android:text="@string/live"
                         android:textColor="@android:color/white"
                         android:textSize="20dp"
                         android:textStyle="bold" />
@@ -63,7 +63,7 @@
                             android:layout_weight="1"
                             android:background="@drawable/live2"
                             android:gravity="center|center_horizontal"
-                            android:text="Lap"
+                            android:text="@string/lap"
                             android:textSize="17dp"
                             android:textStyle="italic" />
 
@@ -73,9 +73,9 @@
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="11/33"
+                            android:text="@string/lap_no."
                             android:id="@+id/lap_info"
-                            android:textSize="17dp"
+                            android:textSize="18dp"
                             android:textStyle="italic" />
 
                     </LinearLayout>
@@ -104,7 +104,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/live2"
                         android:gravity="center"
-                        android:text="Driver Live"
+                        android:text="@string/liveDriver"
                         android:textSize="17dp"
                         android:textStyle="italic" />
 
@@ -115,7 +115,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/driver_name"
-                        android:text="#1 Sebastien Buemi"
+                        android:text="@string/driverName"
                         android:textSize="17dp"
                         android:textStyle="italic" />
 
@@ -199,7 +199,7 @@
                     android:layout_gravity="center|top"
 
                     android:gravity="center"
-                    android:text="Rewind Laps"
+                    android:text="@string/rewind"
                     android:textColor="@android:color/white"
                     android:textSize="20dp"
                     android:textStyle="bold" />

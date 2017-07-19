@@ -3,4 +3,20 @@
     <string name="home">Live Race</string>
     <string name="teams">Teams</string>
     <string name="Driver">Driver</string>
+    <string name="liveRace">LIVE RACE</string>
+    <string name="event_title">FIA Formula E Marrakech ePrix</string>
+    <string name="timing">R2 | 12 nov,16 10:15 AM CET</string>
+    <string name="city">Morocco</string>
+    <string name="country">MARRAKECH</string>
+    <string name="Km">2.97 KM</string>
+    <string name="Watch_live">WATCH LIVE</string>
+    <string name="turns">12 TURNS</string>
+    <string name="ranking">#1</string>
+    <string name="replay">Replay Lap 11</string>
+    <string name="live">Live</string>
+    <string name="lap">Lap</string>
+    <string name="lap_no.">11/33</string>
+    <string name="liveDriver">Driver Live</string>
+    <string name="driverName">Sebastien Buemi</string>
+    <string name="rewind">Rewind Laps </string>
 </resources>

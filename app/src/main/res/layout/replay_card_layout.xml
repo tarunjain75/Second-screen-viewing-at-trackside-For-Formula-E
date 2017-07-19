@@ -34,7 +34,7 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:textColor="@android:color/black"
-                android:text="Replay Lap 11"
+                android:text="@string/replay"
                 android:textSize="20dp"
                 android:textStyle="bold|italic|normal" />
         </LinearLayout>
