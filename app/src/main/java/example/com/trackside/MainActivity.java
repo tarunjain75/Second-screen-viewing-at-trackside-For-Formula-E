@@ -5,6 +5,7 @@ package example.com.trackside;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.graphics.Typeface;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,6 +27,7 @@ import com.flaviofaria.kenburnsview.Transition;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import example.com.trackside.fragments.HorizontalDriverFragment;
 import example.com.trackside.fragments.HorizontalDriverTeamFragment;
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     View menu_view;
     FrameLayout framelay;
     TextView live_race,team,driver;
-
+    private Typeface typeface;
 
 
     @Override
@@ -50,8 +52,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-
+        typeface = Typeface.createFromAsset(this.getApplicationContext().getAssets(),
+                String.format(Locale.US, "fonts/%s", "1MuseoSans_100Italic.otf"));
         KenBurnsView kbv = (KenBurnsView) findViewById(R.id.image);
+
         kbv.setTransitionListener(new KenBurnsView.TransitionListener() {
             @Override
             public void onTransitionStart(Transition transition) {
@@ -64,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         live_race=(TextView)findViewById(R.id.live_race);
+        TextView placeTV=(TextView)findViewById(R.id.placeTV);
+
+       placeTV.setTypeface(typeface);
         team=(TextView)findViewById(R.id.teams);
 
         driver=(TextView)findViewById(R.id.driver);

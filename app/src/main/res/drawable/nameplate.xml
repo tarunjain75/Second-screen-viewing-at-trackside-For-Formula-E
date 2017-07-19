@@ -7,15 +7,15 @@
                 <size
                     android:width="100dp"
                     android:height="20dp"/>
-                <solid android:color="#1DE9B6"/>
+                <solid android:color="#202020"/>
                 <corners
                     android:bottomRightRadius="40dp"
                     android:bottomLeftRadius="40dp"/>
                 <stroke
 
-                    android:color="#ffffff"
-                    android:width="2dp"
-                    android:dashWidth="20dp"/>
+                    android:color="#666666"
+                    android:width="1dp"
+                    android:dashWidth="15dp"/>
             </shape>
 
 
