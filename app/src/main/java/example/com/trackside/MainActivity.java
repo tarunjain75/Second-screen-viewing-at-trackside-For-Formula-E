@@ -4,6 +4,7 @@ package example.com.trackside;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,6 +34,7 @@ import example.com.trackside.fragments.HorizontalDriverFragment;
 import example.com.trackside.fragments.HorizontalDriverTeamFragment;
 import example.com.trackside.fragments.DriverAndTeamFragment;
 import example.com.trackside.fragments.LiveRaceFragment;
+import example.com.trackside.fragments.TrackMapDetailFragment;
 import example.com.trackside.fragments.VerticalDriverFragment;
 
 
@@ -41,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     DrawerLayout drawerLayout;
     View menu_view;
     FrameLayout framelay;
-    TextView live_race, team, driver;
+    TextView live_race, team, driver,timingTextView;
     private Typeface typeface;
 
 
@@ -49,7 +53,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+       /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getWindow(); // in Activity's onCreate() for instance
+            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }*/
+        //getSupportActionBar().hide();
         typeface = Typeface.createFromAsset(this.getApplicationContext().getAssets(),
                 String.format(Locale.US, "fonts/%s", "1MuseoSans_100Italic.otf"));
         KenBurnsView kbv = (KenBurnsView) findViewById(R.id.image);
@@ -70,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView placeTV = (TextView) findViewById(R.id.placeTV);
 
         placeTV.setTypeface(typeface);
+        timingTextView=(TextView)findViewById(R.id.timingTextView);
+        timingTextView.setTypeface(typeface);
         team = (TextView) findViewById(R.id.teams);
 
         driver = (TextView) findViewById(R.id.driver);
@@ -194,5 +204,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         transaction.commit();
     }
 
-
+    public void TrackMap(View view){
+        Fragment trackMapDetailFragment = new TrackMapDetailFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.framelay, trackMapDetailFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 }

@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="#202020"
+    android:background="#202020"
     android:orientation="vertical"
-    tools:context="example.com.trackside.MainActivity">
+    tools:context="example.com.trackside.MainActivity"
+
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="56dp"
         android:background="#262626"
-        android:weightSum="3">
+        android:weightSum="3"
+        >
 
         <ImageView
             android:id="@+id/menu"
@@ -238,7 +241,8 @@ android:background="#202020"
                             android:layout_alignParentTop="true"
                             android:adjustViewBounds="true"
                             android:scaleType="fitXY"
-                             android:src="@drawable/tarckmap"/>
+                            android:onClick="TrackMap"
+                             android:src="@drawable/trackmap"/>
                     </RelativeLayout>
 
                     <android.support.design.widget.TabLayout
