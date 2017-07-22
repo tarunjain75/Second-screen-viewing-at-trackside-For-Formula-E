@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Trackside</string>
-    <string name="home">Live Race</string>
+    <string name="LIVE">Live Race</string>
+    <string name="home">Home</string>
     <string name="teams">Teams</string>
-    <string name="Driver">Driver</string>
+    <string name="Driver">Driver Info</string>
     <string name="liveRace">LIVE RACE</string>
     <string name="event_title">FIA Formula E Marrakech ePrix</string>
     <string name="timing">R2 | 12 nov,16 10:15 AM CET</string>
@@ -31,4 +32,5 @@
     <string name="LaswinName">Sebestien Buemi</string>
     <string name="QualRecName">1:03.099-Nelson Piquet Jr</string>
     <string name="LapRecName">1:02.947-Felix Rosenqvist</string>
+    <string name="driver_detail">Driver Info</string>
 </resources>

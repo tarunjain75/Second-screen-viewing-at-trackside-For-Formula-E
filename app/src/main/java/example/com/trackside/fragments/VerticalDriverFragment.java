@@ -1,5 +1,6 @@
 package example.com.trackside.fragments;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,8 +10,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import example.com.trackside.Adapter.HorizontalRecyclerViewAdapter;
 import example.com.trackside.Adapter.VerticalRecyclerViewAdapter;
@@ -28,6 +31,8 @@ public class VerticalDriverFragment extends Fragment {
     ArrayList<String> text= new ArrayList<String>();
     ArrayList<Integer> image= new ArrayList<Integer>();
     ArrayList<Data> data=new ArrayList<Data>();
+    TextView driverInfo;
+    private Typeface typeface;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +53,12 @@ public class VerticalDriverFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView=(View)inflater.inflate(R.layout.driver_fragment,container,false);
+        typeface = Typeface.createFromAsset(this.getActivity().getAssets(),
+                String.format(Locale.US, "fonts/%s", "1MuseoSans_100Italic.otf"));
 
 
+        driverInfo=(TextView)rootView.findViewById(R.id.driver_info);
+        driverInfo.setTypeface(typeface);
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
         layoutManager= new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);

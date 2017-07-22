@@ -1,6 +1,8 @@
 package example.com.trackside.Adapter;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,8 @@ import java.util.ArrayList;
 
 import example.com.trackside.Data.LiveData;
 import example.com.trackside.R;
+import example.com.trackside.fragments.DriverInfoFragment;
+import example.com.trackside.fragments.TrackSideViewFragment;
 
 /**
  * Created by User on 7/14/2017.
@@ -39,6 +43,14 @@ public class LiveRaceRecyclerViewAdapter extends RecyclerView.Adapter<LiveRaceRe
         holder.circularImageView.setImageResource(data.get(position).getImageId());
         holder.driverName.setText(data.get(position).getName());
         holder.driverLap.setText(data.get(position).getLap());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment liveRaceFragment = new TrackSideViewFragment();
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.framelay, liveRaceFragment).addToBackStack(null).commit();
+            }
+        });
     }
 
     @Override

@@ -3,6 +3,7 @@ package example.com.trackside;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.support.design.widget.TabLayout;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     DrawerLayout drawerLayout;
     View menu_view;
     FrameLayout framelay;
-    TextView live_race, team, driver,timingTextView;
+    TextView live_race, team, driver,timingTextView,home;
     private Typeface typeface;
 
 
@@ -53,11 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window w = getWindow(); // in Activity's onCreate() for instance
-            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }*/
-        //getSupportActionBar().hide();
+
         typeface = Typeface.createFromAsset(this.getApplicationContext().getAssets(),
                 String.format(Locale.US, "fonts/%s", "1MuseoSans_100Italic.otf"));
         KenBurnsView kbv = (KenBurnsView) findViewById(R.id.image);
@@ -80,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         placeTV.setTypeface(typeface);
         timingTextView=(TextView)findViewById(R.id.timingTextView);
         timingTextView.setTypeface(typeface);
-        team = (TextView) findViewById(R.id.teams);
+        home=(TextView)findViewById(R.id.HOME);
 
         driver = (TextView) findViewById(R.id.driver);
         imageView = (ImageView) findViewById(R.id.menu);
@@ -90,31 +87,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         framelay = (FrameLayout) findViewById(R.id.framelay);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-
-        tabLayout = (TabLayout) findViewById(R.id.tab);
-        tabLayout.setupWithViewPager(viewPager);
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new HorizontalDriverFragment(), "Driver");
-        adapter.addFragment(new HorizontalDriverTeamFragment(), "Team");
         viewPager.setAdapter(adapter);
     }
 
@@ -160,9 +137,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void HOME(View v){
+        live_race.setSelected(false);
+        home.setSelected(true);
+        driver.setSelected(false);
+        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
+
     public void LIVE_RACE(View v) {
         live_race.setSelected(true);
-        team.setSelected(false);
+        home.setSelected(false);
         driver.setSelected(false);
         Fragment liveRaceFragment = new LiveRaceFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -172,23 +157,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         drawerLayout.closeDrawers();
     }
 
-    public void TEAMS(View view) {
-        live_race.setSelected(false);
-        team.setSelected(true);
-        driver.setSelected(false);
-        Fragment driverAndTeamFragment = new DriverAndTeamFragment();
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.framelay, driverAndTeamFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-        drawerLayout.closeDrawers();
-    }
+
 
     public void DRIVER(View view) {
         live_race.setSelected(false);
-        team.setSelected(false);
+        home.setSelected(false);
         driver.setSelected(true);
-        Fragment driverAndTeamFragment = new DriverAndTeamFragment();
+        Fragment driverAndTeamFragment = new VerticalDriverFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.framelay, driverAndTeamFragment);
         transaction.addToBackStack(null);

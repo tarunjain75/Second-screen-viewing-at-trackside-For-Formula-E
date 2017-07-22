@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import java.util.ArrayList;
 
 import example.com.trackside.Adapter.HorizontalRecyclerViewAdapter;
@@ -47,7 +48,8 @@ public class HorizontalDriverFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView=(View)inflater.inflate(R.layout.driver_fragment,container,false);
+        View rootView=(View)inflater.inflate(R.layout.driver_fragment_horizontal,container,false);
+
 
 
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);

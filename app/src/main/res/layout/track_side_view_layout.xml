@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <ScrollView
@@ -17,7 +18,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#cf424242"
+                android:background="#4F5D75"
                 android:weightSum="3">
 
 
@@ -57,6 +58,7 @@
                         android:weightSum="2">
 
                         <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -64,19 +66,21 @@
                             android:background="@drawable/live2"
                             android:gravity="center|center_horizontal"
                             android:text="@string/lap"
+                            android:textColor="@android:color/white"
                             android:textSize="17dp"
                             android:textStyle="italic" />
 
                         <TextView
+                            android:id="@+id/lap_info"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="@string/lap_no."
-                            android:id="@+id/lap_info"
+                            android:textColor="#5F758E"
                             android:textSize="18dp"
-                            android:textStyle="italic" />
+                            android:textStyle="italic|bold" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -105,19 +109,21 @@
                         android:background="@drawable/live2"
                         android:gravity="center"
                         android:text="@string/liveDriver"
+                        android:textColor="@android:color/white"
                         android:textSize="17dp"
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/driver_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:id="@+id/driver_name"
                         android:text="@string/driverName"
+                        android:textColor="#5F758E"
                         android:textSize="17dp"
-                        android:textStyle="italic" />
+                        android:textStyle="italic|bold" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -178,7 +184,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#cf424242" />
+                    android:background="#4F5D75" />
             </android.support.v7.widget.CardView>
 
             <RelativeLayout
@@ -197,7 +203,6 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center|top"
-
                     android:gravity="center"
                     android:text="@string/rewind"
                     android:textColor="@android:color/white"
