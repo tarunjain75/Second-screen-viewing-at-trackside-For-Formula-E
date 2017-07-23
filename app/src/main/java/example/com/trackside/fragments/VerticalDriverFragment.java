@@ -15,9 +15,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import example.com.trackside.Adapter.HorizontalRecyclerViewAdapter;
 import example.com.trackside.Adapter.VerticalRecyclerViewAdapter;
-import example.com.trackside.Data.Data;
+import example.com.trackside.Data.LiveData;
 import example.com.trackside.R;
 
 /**
@@ -30,7 +29,9 @@ public class VerticalDriverFragment extends Fragment {
     private RecyclerView.Adapter adapter;
     ArrayList<String> text= new ArrayList<String>();
     ArrayList<Integer> image= new ArrayList<Integer>();
-    ArrayList<Data> data=new ArrayList<Data>();
+    ArrayList<LiveData> data=new ArrayList<LiveData>();
+    ArrayList<String> name= new ArrayList<String>();
+    ArrayList<String> lap= new ArrayList<String>();
     TextView driverInfo;
     private Typeface typeface;
     @Override
@@ -40,13 +41,38 @@ public class VerticalDriverFragment extends Fragment {
         text.add("#1");
         text.add("#2");
         text.add("#3");
-        image.add(R.drawable.pic);
-        image.add(R.drawable.pic);
-        image.add(R.drawable.pic);
+        text.add("#4");
+        text.add("#5");
+        text.add("#6");
+        text.add("#7");
+        text.add("#8");
+        image.add(R.drawable.sam);
+        image.add(R.drawable.nelson);
+        image.add(R.drawable.stephane);
+        image.add(R.drawable.maro);
+        image.add(R.drawable.loic);
+        image.add(R.drawable.jerome);
+        image.add(R.drawable.nicolas);
+        image.add(R.drawable.sebestien);
+        name.add("Sam Bird");
+        name.add("Nelson Piquet Jr.");
+        name.add("Stéphane Sarrazin");
+        name.add("Maro Engel");
+        name.add("Loic Duval");
+        name.add("Jérôme d'Ambrosio");
+        name.add("Nicolas Prost");
+        name.add("Sébastien Buemi");
+        lap.add("2");
+        lap.add("3");
+        lap.add("4");
+        lap.add("5");
+        lap.add("6");
+        lap.add("7");
+        lap.add("8");
+        lap.add("9");
         for(int i=0;i<text.size();i++){
-            data.add(new Data(text.get(i),image.get(i)));
+            data.add(new LiveData(text.get(i),image.get(i),name.get(i),lap.get(i)));
         }
-
     }
 
 

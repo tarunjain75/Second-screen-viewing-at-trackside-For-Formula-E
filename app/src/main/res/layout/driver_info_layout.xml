@@ -21,7 +21,7 @@
             <com.mikhaellopez.circularimageview.CircularImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/pic"
+                android:src="@drawable/ic_user"
                 android:id="@+id/CircularImageViewDriverInfo"
                 app:civ_border_color="#EEEEEE"
                 app:civ_border_width="4dp"
@@ -91,7 +91,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="84dp"
-                    android:src="@drawable/pic"
+                    android:src="@drawable/ic_flag"
                     android:scaleType="fitCenter"/>
             </LinearLayout>
 
@@ -126,7 +126,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="120dp"
-                android:src="@drawable/pic"
+                android:src="@drawable/ic_user"
                 android:id="@+id/VerticalCircularImageView"
                 app:civ_border_color="#EEEEEE"
                 app:civ_border_width="4dp"

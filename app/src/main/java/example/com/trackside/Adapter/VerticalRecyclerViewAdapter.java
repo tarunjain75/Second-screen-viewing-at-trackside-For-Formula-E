@@ -15,6 +15,7 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 import java.util.ArrayList;
 
 import example.com.trackside.Data.Data;
+import example.com.trackside.Data.LiveData;
 import example.com.trackside.R;
 import example.com.trackside.fragments.DriverInfoFragment;
 import example.com.trackside.fragments.LiveRaceFragment;
@@ -27,10 +28,10 @@ import static example.com.trackside.R.id.view;
  */
 
 public class VerticalRecyclerViewAdapter extends RecyclerView.Adapter<VerticalRecyclerViewAdapter.ViewHolder> {
-    ArrayList<Data> data;
+    ArrayList<LiveData> data;
     Context context;
 
-    public VerticalRecyclerViewAdapter(ArrayList<Data> data, Context context){
+    public VerticalRecyclerViewAdapter(ArrayList<LiveData> data, Context context){
         this.data=data;
         this.context=context;
     }

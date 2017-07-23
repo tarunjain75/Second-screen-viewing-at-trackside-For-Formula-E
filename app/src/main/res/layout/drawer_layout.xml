@@ -27,12 +27,17 @@
                 android:drawablePadding="15dp"
                 android:elevation="5dp"
                 android:text="@string/home"
-                android:layout_gravity="center"
                 android:drawableLeft="@drawable/ic_home_red_24dp"
                 android:gravity="center"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:onClick="HOME"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
             <TextView
                 android:id="@+id/live_race"
                 android:layout_width="wrap_content"
@@ -44,13 +49,17 @@
                 android:drawablePadding="15dp"
                 android:elevation="5dp"
                 android:text="@string/LIVE"
-                android:layout_gravity="center"
                 android:drawableLeft="@drawable/ic_action_live_dot"
                 android:gravity="center"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:onClick="LIVE_RACE"/>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
             <TextView
                 android:id="@+id/driver"
                 android:layout_width="wrap_content"
@@ -61,14 +70,18 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="10dp"
                 android:gravity="center"
-                android:layout_gravity="center"
                 android:paddingBottom="10dp"
                 android:textColor="@android:color/white"
                 android:onClick="DRIVER"
                 android:text="@string/Driver"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
 
         </LinearLayout>
 
