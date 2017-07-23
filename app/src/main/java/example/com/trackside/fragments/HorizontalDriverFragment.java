@@ -59,9 +59,6 @@ public class HorizontalDriverFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView=(View)inflater.inflate(R.layout.driver_fragment_horizontal,container,false);
-
-
-
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
         layoutManager= new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
