@@ -1,6 +1,9 @@
 package example.com.trackside.Adapter;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,17 +15,23 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 import java.util.ArrayList;
 
 import example.com.trackside.Data.Data;
+import example.com.trackside.Data.LiveData;
 import example.com.trackside.R;
+import example.com.trackside.fragments.DriverInfoFragment;
+import example.com.trackside.fragments.LiveRaceFragment;
+import example.com.trackside.fragments.TrackSideViewFragment;
+
+import static example.com.trackside.R.id.view;
 
 /**
  * Created by User on 7/14/2017.
  */
 
 public class VerticalRecyclerViewAdapter extends RecyclerView.Adapter<VerticalRecyclerViewAdapter.ViewHolder> {
-    ArrayList<Data> data;
+    ArrayList<LiveData> data;
     Context context;
 
-    public VerticalRecyclerViewAdapter(ArrayList<Data> data, Context context){
+    public VerticalRecyclerViewAdapter(ArrayList<LiveData> data, Context context){
         this.data=data;
         this.context=context;
     }
@@ -39,6 +48,14 @@ public class VerticalRecyclerViewAdapter extends RecyclerView.Adapter<VerticalRe
     public void onBindViewHolder(VerticalRecyclerViewAdapter.ViewHolder holder, int position) {
         holder.circularImageView.setImageResource(data.get(position).getImageId());
         holder.textView.setText(data.get(position).getTxt());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment liveRaceFragment = new DriverInfoFragment();
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.framelay, liveRaceFragment).addToBackStack(null).commit();
+            }
+        });
     }
 
     @Override

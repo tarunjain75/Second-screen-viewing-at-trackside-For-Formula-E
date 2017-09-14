@@ -2,16 +2,16 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:bottom="-25dp"
-        android:top="-25dp"
-        android:left="25dp"
-        android:right="25dp">
+        android:bottom="-45dp"
+        android:top="-45dp"
+        android:left="45dp"
+        android:right="45dp">
         <rotate android:fromDegrees="30">
             <shape android:shape="rectangle">
                 <size
                     android:width="50dp"
                     android:height="100dp"/>
-                <solid android:color="#13a8de"/>
+                <solid android:color="#5F758E"/>
             </shape>
 
         </rotate>

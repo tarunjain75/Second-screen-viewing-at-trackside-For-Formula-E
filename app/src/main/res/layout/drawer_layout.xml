@@ -3,9 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4F5D75"
-    >
-
+    android:background="#4F5D75">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,52 +15,71 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/live_race"
-                android:layout_width="match_parent"
+                android:id="@+id/HOME"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:textColor="@android:color/white"
-                android:paddingLeft="16dp"
+                android:paddingLeft="28dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:drawablePadding="15dp"
                 android:elevation="5dp"
                 android:text="@string/home"
+                android:drawableLeft="@drawable/ic_home_red_24dp"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:onClick="HOME"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:id="@+id/live_race"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:textColor="@android:color/white"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:drawablePadding="13dp"
+                android:elevation="5dp"
+                android:text="@string/LIVE"
+                android:drawableLeft="@drawable/ic_action_live_dot"
+                android:gravity="center"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:onClick="LIVE_RACE"/>
-
-
-            <TextView
-                android:id="@+id/teams"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:drawablePadding="15dp"
-                android:elevation="5dp"
-                android:paddingLeft="16dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColor="@android:color/white"
-                android:onClick="TEAMS"
-                android:text="@string/teams"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
             <TextView
                 android:id="@+id/driver"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:drawablePadding="15dp"
                 android:elevation="5dp"
-                android:paddingLeft="16dp"
+                android:drawableLeft="@drawable/ic_helmet"
+                android:paddingLeft="29dp"
                 android:paddingTop="10dp"
+                android:gravity="center"
                 android:paddingBottom="10dp"
                 android:textColor="@android:color/white"
                 android:onClick="DRIVER"
                 android:text="@string/Driver"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"/>
 
         </LinearLayout>
 

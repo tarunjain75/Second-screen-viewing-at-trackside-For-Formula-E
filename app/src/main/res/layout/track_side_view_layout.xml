@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <ScrollView
@@ -17,7 +18,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#cf424242"
+                android:background="#4F5D75"
                 android:weightSum="3">
 
 
@@ -35,7 +36,7 @@
                         android:layout_gravity="center|top"
                         android:drawableLeft="@drawable/ic_action_live_dot"
                         android:gravity="center"
-                        android:text="Live"
+                        android:text="@string/live"
                         android:textColor="@android:color/white"
                         android:textSize="20dp"
                         android:textStyle="bold" />
@@ -57,26 +58,29 @@
                         android:weightSum="2">
 
                         <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:background="@drawable/live2"
                             android:gravity="center|center_horizontal"
-                            android:text="Lap"
+                            android:text="@string/lap"
+                            android:textColor="@android:color/white"
                             android:textSize="17dp"
                             android:textStyle="italic" />
 
                         <TextView
+                            android:id="@+id/lap_info"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="11/33"
-                            android:id="@+id/lap_info"
-                            android:textSize="17dp"
-                            android:textStyle="italic" />
+                            android:text="@string/lap_no."
+                            android:textColor="#5F758E"
+                            android:textSize="18dp"
+                            android:textStyle="italic|bold" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -104,20 +108,22 @@
                         android:layout_weight="1"
                         android:background="@drawable/live2"
                         android:gravity="center"
-                        android:text="Driver Live"
+                        android:text="@string/liveDriver"
+                        android:textColor="@android:color/white"
                         android:textSize="17dp"
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/driver_name"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:id="@+id/driver_name"
-                        android:text="#1 Sebastien Buemi"
+                        android:text="@string/driverName"
+                        android:textColor="#5F758E"
                         android:textSize="17dp"
-                        android:textStyle="italic" />
+                        android:textStyle="italic|bold" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -125,45 +131,121 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:weightSum="2">
+                android:weightSum="2.02">
 
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-
+                    <ImageView
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxress"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_margin="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VIEW 1"
+                        android:textColor="#D31411"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
                 </RelativeLayout>
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#000000"/>
 
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-
+                    <ImageView
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxra"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_margin="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VIEW 2"
+                        android:textColor="#D31411"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
                 </RelativeLayout>
 
             </LinearLayout>
+            <TextView
+                android:padding="2dp"
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:weightSum="2">
+                android:weightSum="2.02">
 
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-
+                    <ImageView
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxresdefault"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_margin="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VIEW 3"
+                        android:textColor="#D31411"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
                 </RelativeLayout>
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#000000"/>
 
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-
+                    <ImageView
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxres"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_margin="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VIEW 4"
+                        android:textColor="#D31411"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
                 </RelativeLayout>
 
             </LinearLayout>
@@ -178,7 +260,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#cf424242" />
+                    android:background="#4F5D75" />
             </android.support.v7.widget.CardView>
 
             <RelativeLayout
@@ -197,9 +279,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center|top"
-
                     android:gravity="center"
-                    android:text="Rewind Laps"
+                    android:text="@string/rewind"
                     android:textColor="@android:color/white"
                     android:textSize="20dp"
                     android:textStyle="bold" />

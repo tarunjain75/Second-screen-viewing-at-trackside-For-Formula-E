@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="#202020"
+    android:background="#202020"
     android:orientation="vertical"
     tools:context="example.com.trackside.MainActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="56dp"
         android:background="#262626"
-        android:weightSum="3">
+        android:weightSum="3"
+        >
 
         <ImageView
             android:id="@+id/menu"
@@ -29,7 +32,7 @@ android:background="#202020"
             android:layout_gravity="center"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="LIVE RACE"
+            android:text="@string/liveRace"
             android:textColor="#D31411"
             android:textSize="19dp"
             android:textStyle="bold" />
@@ -93,7 +96,7 @@ android:background="#202020"
                             android:layout_marginEnd="30dp"
                             android:layout_marginStart="30dp"
                             android:padding="8dp"
-                            android:text="FIA Formula E Marrakech ePrix"
+                            android:text="@string/event_title"
                             android:textColor="#D4D4D4"
                             android:textSize="15dp"
                             android:textStyle="bold" />
@@ -120,13 +123,13 @@ android:background="#202020"
                             >
 
                             <TextView
-                                android:id="@+id/textView"
+                                android:id="@+id/timingTextView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginTop="10dp"
                                 android:gravity="center"
-                                android:text="R2 | 12 nov,16 10:15 AM CET"
+                                android:text="@string/timing"
                                 android:textColor="#D4D4D4"
                                 android:textSize="12dp"
                                 android:textStyle="bold|normal" />
@@ -137,7 +140,7 @@ android:background="#202020"
                                 android:layout_gravity="center"
                                 android:drawableLeft="@drawable/ic_star_red_500_18dp"
                                 android:gravity="center"
-                                android:text="Moroc"
+                                android:text="@string/city"
                                 android:textColor="#666666"
                                 android:textSize="18dp"
                                 android:textStyle="bold|normal" />
@@ -149,7 +152,7 @@ android:background="#202020"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="10dp"
                                 android:gravity="center"
-                                android:text="MARRAKECH"
+                                android:text="@string/country"
                                 android:textColor="#FF1B1B"
                                 android:textSize="16dp"/>
                         </LinearLayout>
@@ -177,7 +180,7 @@ android:background="#202020"
                             android:layout_marginStart="7dp"
                             android:layout_weight="0.5"
                             android:gravity="center|center_vertical"
-                            android:text="2.97 KM"
+                            android:text="@string/Km"
                             android:textColor="@android:color/white"
                             android:textSize="12dp"
 
@@ -203,9 +206,10 @@ android:background="#202020"
                                 android:layout_gravity="center|top"
                                 android:drawableLeft="@drawable/ic_videocam_white_24dp"
                                 android:gravity="center"
-                                android:text="WATCH LIVE"
+                                android:text="@string/Watch_live"
                                 android:textColor="@android:color/white"
                                 android:textSize="15dp"
+                                android:onClick="WatchLive"
                                 android:textStyle="bold" />
 
                         </RelativeLayout>
@@ -218,7 +222,7 @@ android:background="#202020"
                             android:layout_marginRight="5dp"
                             android:layout_weight="0.7"
                             android:gravity="center"
-                            android:text="12 TURNS"
+                            android:text="@string/turns"
                             android:textColor="@android:color/white"
                             android:textSize="12dp"
                             android:textStyle="bold" />
@@ -228,7 +232,7 @@ android:background="#202020"
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:elevation="20dp">
 
                         <ImageView
@@ -237,22 +241,15 @@ android:background="#202020"
                             android:layout_alignParentTop="true"
                             android:adjustViewBounds="true"
                             android:scaleType="fitXY"
-                             android:src="@drawable/tarckmap"/>
+                            android:onClick="TrackMap"
+                             android:src="@drawable/trackmap"/>
                     </RelativeLayout>
 
-                    <android.support.design.widget.TabLayout
-                        android:id="@+id/tab"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:elevation="10dp"
-                        app:tabBackground="@drawable/tilted"
-                        app:tabGravity="fill"
-                        app:tabMode="fixed" />
 
                     <android.support.v4.view.ViewPager
                         android:id="@+id/viewpager"
                         android:layout_width="match_parent"
-                        android:layout_height="125dp" />
+                        android:layout_height="120dp" />
 
 
                 </LinearLayout>
@@ -262,7 +259,7 @@ android:background="#202020"
         <include
             android:id="@+id/Menu_view"
             layout="@layout/drawer_layout"
-            android:layout_width="250dp"
+            android:layout_width="230dp"
             android:layout_height="match_parent"
             android:layout_gravity="left" />
     </android.support.v4.widget.DrawerLayout>

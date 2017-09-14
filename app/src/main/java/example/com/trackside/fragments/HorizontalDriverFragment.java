@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import java.util.ArrayList;
 
 import example.com.trackside.Adapter.HorizontalRecyclerViewAdapter;
@@ -35,9 +36,19 @@ public class HorizontalDriverFragment extends Fragment {
         text.add("#1");
         text.add("#2");
         text.add("#3");
-        image.add(R.drawable.pic);
-        image.add(R.drawable.pic);
-        image.add(R.drawable.pic);
+        text.add("#4");
+        text.add("#5");
+        text.add("#6");
+        text.add("#7");
+        text.add("#8");
+        image.add(R.drawable.sam);
+        image.add(R.drawable.nelson);
+        image.add(R.drawable.stephane);
+        image.add(R.drawable.maro);
+        image.add(R.drawable.loic);
+        image.add(R.drawable.jerome);
+        image.add(R.drawable.nicolas);
+        image.add(R.drawable.sebestien);
         for(int i=0;i<text.size();i++){
             data.add(new Data(text.get(i),image.get(i)));
         }
@@ -47,9 +58,7 @@ public class HorizontalDriverFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView=(View)inflater.inflate(R.layout.driver_fragment,container,false);
-
-
+        View rootView=(View)inflater.inflate(R.layout.driver_fragment_horizontal,container,false);
         recyclerView=(RecyclerView)rootView.findViewById(R.id.recycler_view);
         layoutManager= new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
