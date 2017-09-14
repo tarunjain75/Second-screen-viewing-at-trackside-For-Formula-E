@@ -47,6 +47,7 @@ public class TrackSideViewFragment extends Fragment{
         image.add(R.drawable.cam3);
         image.add(R.drawable.cam3);
         image.add(R.drawable.cam3);
+        
         for(int i=0;i<text.size();i++){
             data.add(new Data(text.get(i),image.get(i)));
         }
