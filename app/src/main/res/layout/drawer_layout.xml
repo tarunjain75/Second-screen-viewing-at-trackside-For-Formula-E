@@ -14,6 +14,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="HOME">
             <TextView
                 android:id="@+id/HOME"
                 android:layout_width="wrap_content"
@@ -29,13 +33,18 @@
                 android:gravity="center"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:onClick="HOME"/>
+                />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@android:color/white"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="LIVE_RACE">
             <TextView
                 android:id="@+id/live_race"
                 android:layout_width="wrap_content"
@@ -51,13 +60,18 @@
                 android:gravity="center"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:onClick="LIVE_RACE"/>
+                />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@android:color/white"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="DRIVER">
             <TextView
                 android:id="@+id/driver"
                 android:layout_width="wrap_content"
@@ -70,10 +84,10 @@
                 android:gravity="center"
                 android:paddingBottom="10dp"
                 android:textColor="@android:color/white"
-                android:onClick="DRIVER"
                 android:text="@string/Driver"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
