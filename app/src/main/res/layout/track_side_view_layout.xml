@@ -137,12 +137,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="8dp">
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-                    <VideoView
+                    <ImageView
                         android:id="@+id/view1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxress"
+                        android:scaleType="fitXY"/>
                     <TextView
                         android:layout_margin="8dp"
                         android:layout_width="wrap_content"
@@ -163,12 +165,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="8dp">
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-                    <VideoView
+                    <ImageView
                         android:id="@+id/view2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxra"
+                        android:scaleType="fitXY"/>
                     <TextView
                         android:layout_margin="8dp"
                         android:layout_width="wrap_content"
@@ -182,7 +186,7 @@
 
             </LinearLayout>
             <TextView
-                android:padding="8dp"
+                android:padding="2dp"
                 android:id="@+id/line3"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -197,12 +201,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="8dp">
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-                    <VideoView
+                    <ImageView
                         android:id="@+id/view3"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxresdefault"
+                        android:scaleType="fitXY"/>
                     <TextView
                         android:layout_margin="8dp"
                         android:layout_width="wrap_content"
@@ -223,12 +229,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:padding="8dp">
+                    android:padding="4dp">
                     <!-- TODO:place your Video view here-->
-                    <VideoView
+                    <ImageView
                         android:id="@+id/view4"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="match_parent"
+                        android:src="@drawable/maxres"
+                        android:scaleType="fitXY"/>
                     <TextView
                         android:layout_margin="8dp"
                         android:layout_width="wrap_content"

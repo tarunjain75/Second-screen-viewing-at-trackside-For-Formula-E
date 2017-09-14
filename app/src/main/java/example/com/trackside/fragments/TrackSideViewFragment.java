@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.github.anastr.speedviewlib.PointerSpeedometer;
-import com.tomer.fadingtextview.FadingTextView;
-
 import java.util.ArrayList;
 
 import example.com.trackside.Adapter.ReplayRecyclerViewAdapter;
@@ -61,13 +58,8 @@ public class TrackSideViewFragment extends Fragment{
         view= inflater.inflate(R.layout.track_side_view_layout,container,false);
         lap_info=(TextView)view.findViewById(R.id.lap_info);
         Driver_name=(TextView)view.findViewById(R.id.driver_name);
-        //recyclerView=(RecyclerView)view.findViewById(R.id.replay_recyclerView);
-        PointerSpeedometer pointerSpeedometer= (PointerSpeedometer)view.findViewById(R.id.pointerSpeedometer);
+        recyclerView=(RecyclerView)view.findViewById(R.id.replay_recyclerView);
 
-// change speed to 50 Km/h
-        pointerSpeedometer.speedTo(70);
-        FadingTextView FTV = (FadingTextView) view.findViewById(R.id.fadingTextView);
-        FadingTextView FTV1 = (FadingTextView) view.findViewById(R.id.fadingTextViewWorst);
         VideoView view1=(VideoView) view.findViewById(R.id.view1);
         VideoView view2=(VideoView) view.findViewById(R.id.view2);
 
@@ -88,9 +80,9 @@ public class TrackSideViewFragment extends Fragment{
         });
 
 
-        //layoutManager=new LinearLayoutManager(getActivity());
-        //adapter=new ReplayRecyclerViewAdapter(data,getContext());
-        //recyclerView.setItemAnimator(new DefaultItemAnimator());
+        layoutManager=new LinearLayoutManager(getActivity());
+        adapter=new ReplayRecyclerViewAdapter(data,getContext());
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
         return view;
     }
 }

@@ -41,4 +41,6 @@ dependencies {
     compile 'com.tomer:fadingtextview:2.0'
     compile 'com.github.anastr:speedviewlib:1.1.6'
     testCompile 'junit:junit:4.12'
+    compile files('libs/red5streaming.jar')
+
 }

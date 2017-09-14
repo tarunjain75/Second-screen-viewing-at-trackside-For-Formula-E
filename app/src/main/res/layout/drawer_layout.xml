@@ -3,9 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4F5D75"
-    >
-
+    android:background="#4F5D75">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:textColor="@android:color/white"
-                android:paddingLeft="16dp"
+                android:paddingLeft="28dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:drawablePadding="15dp"
@@ -52,10 +50,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:textColor="@android:color/white"
-                android:paddingLeft="16dp"
+                android:paddingLeft="25dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:drawablePadding="15dp"
+                android:drawablePadding="13dp"
                 android:elevation="5dp"
                 android:text="@string/LIVE"
                 android:drawableLeft="@drawable/ic_action_live_dot"
@@ -81,7 +79,7 @@
                 android:drawablePadding="15dp"
                 android:elevation="5dp"
                 android:drawableLeft="@drawable/ic_helmet"
-                android:paddingLeft="16dp"
+                android:paddingLeft="29dp"
                 android:paddingTop="10dp"
                 android:gravity="center"
                 android:paddingBottom="10dp"

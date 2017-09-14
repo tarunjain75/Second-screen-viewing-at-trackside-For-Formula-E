@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import example.com.trackside.cameraFeeds.SubscribeTest;
 import example.com.trackside.fragments.HorizontalDriverFragment;
 import example.com.trackside.fragments.HorizontalDriverTeamFragment;
 import example.com.trackside.fragments.DriverAndTeamFragment;
@@ -87,6 +88,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         framelay = (FrameLayout) findViewById(R.id.framelay);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
+
+
+
+
     }
 
     private void setupViewPager(ViewPager viewPager) {
