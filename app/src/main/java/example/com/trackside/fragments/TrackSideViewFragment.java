@@ -36,6 +36,7 @@ public class TrackSideViewFragment extends Fragment{
     ArrayList<String> text= new ArrayList<String>();
     ArrayList<Integer> image= new ArrayList<Integer>();
     ArrayList<Data> data=new ArrayList<Data>();
+    
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class TrackSideViewFragment extends Fragment{
         image.add(R.drawable.cam3);
         image.add(R.drawable.cam3);
         image.add(R.drawable.cam3);
+        
         for(int i=0;i<text.size();i++){
             data.add(new Data(text.get(i),image.get(i)));
         }

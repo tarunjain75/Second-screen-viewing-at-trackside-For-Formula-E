@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import example.com.trackside.cameraFeeds.SubscribeTes;
 import example.com.trackside.cameraFeeds.SubscribeTest;
 
 public class TestComponents extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class TestComponents extends AppCompatActivity {
 //        view.setVideoURI(Uri.parse(path));
 //        view.start();
 
-        SubscribeTest frag = new SubscribeTest();
+        SubscribeTes frag = new SubscribeTes();
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.test_list_container, frag)
