@@ -36,6 +36,7 @@ public class TrackSideViewFragment extends Fragment{
     ArrayList<String> text= new ArrayList<String>();
     ArrayList<Integer> image= new ArrayList<Integer>();
     ArrayList<Data> data=new ArrayList<Data>();
+    
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
