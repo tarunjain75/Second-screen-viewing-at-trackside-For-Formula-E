@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -60,29 +61,40 @@ public class TrackSideViewFragment extends Fragment{
         Driver_name=(TextView)view.findViewById(R.id.driver_name);
         recyclerView=(RecyclerView)view.findViewById(R.id.replay_recyclerView);
 
-        VideoView view1=(VideoView) view.findViewById(R.id.view1);
-        VideoView view2=(VideoView) view.findViewById(R.id.view2);
+        ImageView view1=(ImageView) view.findViewById(R.id.view1);
+        ImageView view2=(ImageView) view.findViewById(R.id.view2);
+        ImageView view3=(ImageView) view.findViewById(R.id.view3);
+        ImageView view4=(ImageView) view.findViewById(R.id.view4);
 
 
         String path = "android.resource://" + getActivity().getApplicationContext().getPackageName() + "/" + R.raw.race;
-        view1.setVideoURI(Uri.parse(path));
-        view1.start();
-        view2.setVideoURI(Uri.parse(path));
-        view2.start();
+//        view1.setVideoURI(Uri.parse(path));
+//        //view1.start();
+//        view2.setVideoURI(Uri.parse(path));
+//        //view2.start();
+//        view3.setVideoURI(Uri.parse(path));
+//        view4.setVideoURI(Uri.parse(path));
 
-        view1.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Intent in=new Intent(getActivity().getApplicationContext(), TestComponents.class);
-                startActivity(in);
-                return  false;
-            }
-        });
-
+        startOnTouchVideoActivity(view1);
+        startOnTouchVideoActivity(view2);
+        startOnTouchVideoActivity(view3);
+        startOnTouchVideoActivity(view4);
 
         layoutManager=new LinearLayoutManager(getActivity());
         adapter=new ReplayRecyclerViewAdapter(data,getContext());
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         return view;
+
+    }
+
+    void startOnTouchVideoActivity(ImageView view)
+    {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in=new Intent(getActivity().getApplicationContext(), TestComponents.class);
+                startActivity(in);
+            }
+        });
     }
 }

@@ -5,9 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="example.com.trackside.TestComponents">
-    <VideoView
+
+
+    <FrameLayout
+        android:id="@+id/test_list_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/view_topleft_video"/>
+        android:layout_height="match_parent" />
+
 
 </android.support.constraint.ConstraintLayout>

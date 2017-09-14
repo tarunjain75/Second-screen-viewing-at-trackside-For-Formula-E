@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import example.com.trackside.cameraFeeds.SubscribeTest;
+
 public class TestComponents extends AppCompatActivity {
 
     @Override
@@ -21,10 +23,16 @@ public class TestComponents extends AppCompatActivity {
         videoView.setVideoURI(uri);
         videoView.requestFocus();
         videoView.start();*/
-        VideoView view = (VideoView)findViewById(R.id.view_topleft_video);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.race;
-        view.setVideoURI(Uri.parse(path));
-        view.start();
+//        VideoView view = (VideoView)findViewById(R.id.view_topleft_video);
+//        String path = "android.resource://" + getPackageName() + "/" + R.raw.race;
+//        view.setVideoURI(Uri.parse(path));
+//        view.start();
+
+        SubscribeTest frag = new SubscribeTest();
+
+        getFragmentManager().beginTransaction()
+                .replace(R.id.test_list_container, frag)
+                .commit();
 
     }
 }

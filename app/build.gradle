@@ -40,4 +40,6 @@ dependencies {
     compile 'com.mikhaellopez:circularimageview:3.0.2'
     compile 'com.tomer:fadingtextview:1.8.1'
     testCompile 'junit:junit:4.12'
+    compile files('libs/red5streaming.jar')
+
 }
