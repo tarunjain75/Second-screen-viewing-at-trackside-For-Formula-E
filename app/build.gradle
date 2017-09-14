@@ -38,6 +38,7 @@ dependencies {
     compile 'commons-io:commons-io:2.4'
     compile 'com.flaviofaria:kenburnsview:1.0.7'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
-    compile 'com.tomer:fadingtextview:1.8.1'
+    compile 'com.tomer:fadingtextview:2.0'
+    compile 'com.github.anastr:speedviewlib:1.1.6'
     testCompile 'junit:junit:4.12'
 }

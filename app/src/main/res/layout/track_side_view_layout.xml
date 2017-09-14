@@ -97,7 +97,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:elevation="20dp"
                     android:weightSum="2">
 
@@ -105,7 +105,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="0.8"
                         android:background="@drawable/live2"
                         android:gravity="center"
                         android:text="@string/liveDriver"
@@ -118,7 +118,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
+                        android:layout_weight="1.2"
                         android:gravity="center"
                         android:text="@string/driverName"
                         android:textColor="#5F758E"
@@ -242,7 +242,167 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="true">
+                    <com.github.anastr.speedviewlib.PointerSpeedometer
+                        android:id="@+id/pointerSpeedometer"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:sv_speedometerMode="TOP"
+                        app:sv_speedometerWidth="1dp"
+                        app:sv_indicatorWidth="10dp"
+                        app:sv_indicator="NoIndicator"
+                        android:layout_gravity="center"
+                        app:sv_speedTextSize="20dp"
+                        app:sv_backgroundCircleColor="#5F758E"
+                        />
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="true">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Avg. Speed"
+                                android:textSize="20dp"
+                                android:padding="5dp"
+                                android:gravity="center"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:padding="5dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:id="@+id/avgSpeed"
+                                    android:text="65"
+                                    android:textSize="20dp"
+                                    android:paddingRight="5dp"
+                                    android:gravity="right"
+                                    android:layout_height="match_parent" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="Km/h"
+                                    android:gravity="left|bottom"
+                                    android:layout_height="match_parent" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
             <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:elevation="20dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/live2"
+                        android:gravity="center"
+                        android:text="Best Lap"
+                        android:textColor="@android:color/white"
+                        android:textSize="17dp"
+                        android:textStyle="italic" />
+
+                    <com.tomer.fadingtextview.FadingTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fadingTextView"
+                        app:texts="@array/best"
+                        app:timeout="500"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:elevation="20dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/live2"
+                        android:gravity="center"
+                        android:text="Worst Lap"
+                        android:textColor="@android:color/white"
+                        android:textSize="17dp"
+                        android:textStyle="italic" />
+
+                    <com.tomer.fadingtextview.FadingTextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fadingTextViewWorst"
+                        app:texts="@array/worst"
+                        app:timeout="500"
+                        android:gravity="center"
+                        android:textSize="17dp"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--<android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -251,7 +411,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:background="#4F5D75" />
             </android.support.v7.widget.CardView>
 
@@ -263,7 +423,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/livebttn" />
 
                 <TextView
@@ -274,7 +434,7 @@
                     android:gravity="center"
                     android:text="@string/rewind"
                     android:textColor="@android:color/white"
-                    android:textSize="20dp"
+                    android:textSize="17dp"
                     android:textStyle="bold" />
 
             </RelativeLayout>
@@ -282,7 +442,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/replay_recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" />-->
         </LinearLayout>
     </ScrollView>
 

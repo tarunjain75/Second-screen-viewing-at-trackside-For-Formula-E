@@ -33,4 +33,10 @@
     <string name="QualRecName">1:03.099-Nelson Piquet Jr</string>
     <string name="LapRecName">1:02.947-Felix Rosenqvist</string>
     <string name="driver_detail">Driver Info</string>
+    <string-array name="best">
+        <item>1:04.957</item>
+    </string-array>
+    <string-array name="worst">
+        <item>1:09.957</item>
+    </string-array>
 </resources>
